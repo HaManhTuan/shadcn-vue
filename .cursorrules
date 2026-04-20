@@ -1,0 +1,77 @@
+## General Objectives
+
+- Keep code readable, testable, and easy to scale by feature.
+- Prefer small, scoped changes; avoid broad refactors unless explicitly requested.
+
+## Stack and Coding Standards
+
+- Vue 3 + Composition API + `<script setup lang="ts">` is the default.
+- Avoid `any`; if unavoidable, limit scope and document why.
+- Default file naming is `kebab-case`; keep upstream exceptions in `src/components/ui/**`.
+
+## Required Folder Structure
+
+- `src/pages/`: route-level pages and feature-local components.
+- `src/components/ui/`: reusable UI primitives (shadcn-vue).
+- `src/components/`: shared components used across features.
+- `src/composables/`: reusable logic (`use-*.ts`).
+- `src/stores/`: shared/global Pinia state.
+- `src/services/api/`: query/mutation hooks and API access.
+- `src/services/types/`: shared service/data contract types.
+- `src/plugins/`: i18n, pinia, query, router, etc.
+
+## Architecture and Dependency Direction
+
+- Preferred flow: `pages -> components/composables -> services -> types/utils`.
+- Lower layers must not import higher layers.
+- Do not place heavy business logic inside `.vue` pages/components; move it to composables/services/stores.
+- Avoid god files; split modules when components become too large or multi-purpose.
+
+## Service API / Data Contracts
+
+- Do not call HTTP directly in pages/components when a service hook exists.
+- Query keys must be stable arrays, domain-first (e.g., `['tasks']`, `['task', id]`).
+- Mutations must invalidate related queries in `onSuccess`/`onSettled`.
+- Keep DTO and UI/domain models distinct; normalize/map API data in the service layer.
+- Do not pass raw API shapes directly to UI when normalization/null-safety is needed.
+
+## Pinia / Router / Composables
+
+- Use Pinia for shared state only; keep local UI state in components/composables.
+- Avoid direct store-state destructuring that breaks reactivity; prefer `storeToRefs`.
+- Router guards must handle async flows clearly and avoid redirect loops/race conditions.
+- For same-component route changes (`params/query`), handle updates with proper watch/logic (do not assume remount).
+- Each composable should have one clear purpose with typed inputs/outputs; avoid hidden singletons.
+
+## Component Conventions (Atomic + Feature Boundaries)
+
+- Do not place single-feature components in shared folders.
+- Shared components must not import from feature folders.
+- Do not violate hierarchy with cross-level reverse imports.
+- Avoid over-generalized components with excessive props; split into focused variants.
+- Prefer composition/slots over complex boolean-prop APIs.
+- If a higher-level reusable pattern already exists (molecule/organism), reuse it instead of hand-composing atoms.
+- Molecules must not fetch data; data fetching belongs in organisms or feature components.
+
+## Tailwind / UI / Motion
+
+- Prefer mobile-first, token-based styling with intentional classes; avoid unmaintainable class strings.
+- Theme/token updates must remain compatible with the project’s Tailwind version.
+- Use animation intentionally and sparingly; respect `prefers-reduced-motion`.
+- If the prompt asks to create/update UI (layout, style, spacing, typography, interaction, animation, accessibility), apply `ui-ux-pro-max` before coding.
+- If the task is non-UI (API, DB, infra, scripts), do not use `ui-ux-pro-max`.
+- Use `ui-ux-pro-max` only for UI/UX decisions; it does not replace architecture, data-layer, or quality-gate rules.
+
+## Error Handling and Observability
+
+- No empty `catch {}` blocks.
+- All important async flows must expose clear `loading/success/error` states.
+- Do not display raw server errors directly to end users.
+- Retry only transient failures, with bounded attempts and basic backoff.
+
+## Quality Gates Before Handoff
+
+- Do not add dead code or unnecessary TODO comments.
+- Keep internal contracts stable (props/emits/store/API); when contracts change, update related call sites.
+- Run lint/typecheck for changed scope and fix newly introduced issues.
+- For non-obvious technical decisions, add a brief code note or task/PR explanation.

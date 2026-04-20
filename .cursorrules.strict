@@ -1,0 +1,44 @@
+# Cursor Rules — Strict Mode (Fast)
+
+1) Vue 3 + `<script setup lang="ts">` + Composition API is the default.
+2) Keep scope small: solve the requested issue, avoid broad refactors unless requested.
+3) Do not introduce `any` unless unavoidable; if used, keep it tightly scoped.
+4) New files use `kebab-case` (except `src/components/ui/**`, keep upstream naming).
+
+5) Put files in the correct layer:
+- `src/pages/*`: pages + feature-local components.
+- `src/components/*`: shared cross-feature components.
+- `src/components/ui/*`: primitive UI.
+- `src/composables/*`: reusable logic.
+- `src/stores/*`: global/shared state.
+- `src/services/api/*`: API hooks + query/mutation.
+- `src/services/types/*`: shared service types.
+
+6) Required dependency direction:
+`pages -> components/composables -> services -> types/utils`
+(lower layers must not import higher layers).
+
+7) Do not call HTTP directly in pages/components when a service hook exists.
+8) Query keys must be stable arrays; mutations must invalidate related queries.
+9) Map/normalize data in the service layer; UI should not consume raw API shapes.
+
+10) Use Pinia for shared state only; keep local state in components/composables.
+11) No empty `catch {}`; all important async flows need clear loading/error states.
+12) Do not expose raw server errors to end users.
+
+13) Component boundaries:
+- Do not place feature-only components in shared folders.
+- Shared components must not import from feature folders.
+- Do not violate hierarchy with reverse/cross-level imports.
+- Prefer slots/composition over complex boolean-prop APIs.
+- Reuse higher-level existing patterns when available.
+
+14) UI tasks policy:
+- If the prompt asks to create/update UI (layout, style, spacing, typography, interaction, animation, accessibility), apply `ui-ux-pro-max` before coding.
+- If the task is non-UI (API, DB, infra, scripts), do not use `ui-ux-pro-max`.
+- `ui-ux-pro-max` is for UI/UX decisions only; it does not replace architecture/data-layer rules.
+
+15) Quality before handoff:
+- No dead code or unnecessary TODO comments.
+- If contracts change (props/emits/store/API), update related call sites.
+- Run lint/typecheck for changed scope and fix newly introduced issues.

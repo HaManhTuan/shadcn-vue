@@ -1,0 +1,359 @@
+{
+  "premium": {
+    "premium": "Gói cao cấp",
+    "UpgradeNow": "Nâng cấp ngay"
+  },
+  "marketing": {
+    "hero": {
+      "learnPeople": "Hơn 1K+ người đã tham gia",
+      "getMore": "Khám phá thêm",
+      "title": "Bạn có dám dành 365 ngày để chứng kiến sự lột xác hoàn toàn không?",
+      "subtitle": "Đồng hồ cát thời gian đang bùng nổ như sấm sét. Khi lượng biến vượt qua điểm tới hạn, mỗi buổi sáng và tối bạn nỗ lực sẽ trở thành biển sao rộng lớn!"
+    },
+    "features": {
+      "title": "Tính năng",
+      "feature1": {
+        "title": "Sử dụng công nghệ hiện đại",
+        "description": "Thư viện component hiện đại hơn, tùy chỉnh từng component theo ý bạn"
+      },
+      "feature2": {
+        "title": "Dễ dàng triển khai",
+        "description": "Triển khai lên server chỉ với một lần nhấn, không cần cấu hình phức tạp"
+      },
+      "feature3": {
+        "title": "Mã nguồn mở",
+        "description": "Mọi dòng code đều là mã nguồn mở, bạn có thể tùy ý sửa đổi và mở rộng"
+      },
+      "feature4": {
+        "title": "Hỗ trợ cộng đồng",
+        "description": "Bạn có thể tìm sự giúp đỡ từ cộng đồng và chia sẻ kinh nghiệm"
+      }
+    },
+    "evaluation": {
+      "title": "Đánh giá",
+      "subtitle": "Các đánh giá này là dữ liệu mô phỏng, không phải dữ liệu thực tế"
+    },
+    "pricingPlans": {
+      "title": "Bảng giá",
+      "subtitle": "Chọn gói phù hợp nhất với bạn",
+      "buy": "Mua ngay",
+      "hobby": {
+        "title": "Gói Cơ Bản",
+        "description": "Nâng cao kỹ năng trong 3 năm",
+        "price": "399",
+        "discount": "599",
+        "unit": "¥",
+        "billing": {
+          "cycle": "",
+          "period": ""
+        },
+        "features": {
+          "feature1": "Sử dụng một phần mã nguồn của website",
+          "feature2": "Nhận cập nhật công nghệ mới nhất",
+          "feature3": "Hơn 100 component",
+          "feature4": "Hơn 100 trang"
+        }
+      },
+      "starter": {
+        "title": "Gói Khởi Đầu",
+        "description": "Nâng cao kỹ năng trong 5 năm",
+        "price": "599",
+        "discount": "899",
+        "unit": "¥",
+        "billing": {
+          "cycle": "",
+          "period": ""
+        },
+        "features": {
+          "feature1": "Sử dụng toàn bộ mã nguồn website",
+          "feature2": "Đọc tài liệu trực tuyến chất lượng",
+          "feature3": "Nhận cập nhật công nghệ mới nhất",
+          "feature4": "Hơn 200 component",
+          "feature5": "Hơn 200 trang"
+        }
+      },
+      "business": {
+        "title": "Gói Doanh Nghiệp",
+        "description": "Nâng cao kỹ năng trong 10 năm",
+        "price": "199",
+        "discount": "399",
+        "unit": "$",
+        "billing": {
+          "cycle": "",
+          "period": ""
+        },
+        "features": {
+          "feature1": "Sử dụng toàn bộ mã nguồn website",
+          "feature2": "Đọc tài liệu trực tuyến chất lượng",
+          "feature3": "Nhận cập nhật công nghệ mới nhất",
+          "feature4": "Hơn 200 component",
+          "feature5": "Hơn 200 trang",
+          "feature6": "Hỗ trợ trợ lý riêng"
+        }
+      }
+    },
+    "setup": {
+      "title": "Bắt đầu nhanh",
+      "subtitle": "Chỉ cần 3 phút để bắt đầu sử dụng"
+    }
+  },
+  "login": "Đăng nhập",
+  "email": "Email",
+  "password": "Mật khẩu",
+  "download": "Tải xuống",
+  "logout": "Đăng xuất",
+  "forgotPassword": "Quên mật khẩu?",
+  "register": "Đăng ký",
+  "language": "Tiếng Việt",
+  "forgotPasswordPage": {
+    "title": "Quên mật khẩu",
+    "description": "Nhập email đã đăng ký, chúng tôi sẽ gửi cho bạn liên kết đặt lại mật khẩu.",
+    "emailPlaceholder": "m{'@'}example.com",
+    "continue": "Tiếp tục",
+    "noAccount": "Chưa có tài khoản?",
+    "signUp": "Đăng ký",
+    "errors": {
+      "requiredEmail": "Email là bắt buộc.",
+      "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ."
+    }
+  },
+  "loginPage": {
+    "title": "Đăng nhập",
+    "description": "Nhập email và mật khẩu của bạn để đăng nhập vào tài khoản.",
+    "noAccount": "Chưa có tài khoản?",
+    "signUp": "Đăng ký",
+    "emailPlaceholder": "m{'@'}example.com",
+    "passwordPlaceholder": "Nhập mật khẩu",
+    "showPassword": "Hiện",
+    "hidePassword": "Ẩn",
+    "continueWith": "Hoặc tiếp tục với",
+    "termsPrefix": "Bằng cách đăng nhập, bạn đồng ý với",
+    "and": "và",
+    "errors": {
+      "requiredEmail": "Email là bắt buộc.",
+      "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+      "requiredPassword": "Mật khẩu là bắt buộc."
+    }
+  },
+  "signUpPage": {
+    "title": "Đăng ký",
+    "description": "Nhập thông tin bên dưới để tạo tài khoản mới.",
+    "hasAccount": "Đã có tài khoản?",
+    "signIn": "Đăng nhập",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "firstNamePlaceholder": "An",
+    "lastNamePlaceholder": "Nguyễn",
+    "emailPlaceholder": "m{'@'}example.com",
+    "passwordPlaceholder": "Tạo mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
+    "showPassword": "Hiện",
+    "hidePassword": "Ẩn",
+    "submit": "Tạo tài khoản",
+    "continueWith": "Hoặc tiếp tục với",
+    "termsPrefix": "Bằng cách tạo tài khoản, bạn đồng ý với",
+    "and": "và",
+    "errors": {
+      "requiredFirstName": "Tên là bắt buộc.",
+      "requiredLastName": "Họ là bắt buộc.",
+      "requiredEmail": "Email là bắt buộc.",
+      "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+      "requiredPassword": "Mật khẩu là bắt buộc.",
+      "passwordMin": "Mật khẩu phải có ít nhất 8 ký tự.",
+      "requiredConfirmPassword": "Vui lòng xác nhận mật khẩu.",
+      "passwordMismatch": "Mật khẩu xác nhận không khớp."
+    }
+  },
+  "authLayout": {
+    "headline": "Không gian làm việc tinh gọn cho đội ngũ tập trung.",
+    "subheadline": "Bố cục thoáng, thứ bậc rõ ràng và tương tác mượt mà cho trải nghiệm xác thực cao cấp.",
+    "footer": "Được tin dùng bởi các đội ngũ xây dựng sản phẩm chỉn chu."
+  },
+  "homePage": {
+    "searchKeyWords": "Tìm kiếm menu"
+  },
+  "changeLanguage": "Đổi ngôn ngữ",
+  "sidebar": {
+    "group": {
+      "general": "Chung",
+      "pages": "Trang",
+      "other": "Khác"
+    },
+    "settings": {
+      "profile": "Hồ sơ",
+      "account": "Tài khoản",
+      "appearance": "Giao diện",
+      "notifications": "Thông báo",
+      "display": "Hiển thị"
+    },
+    "general": {
+      "dashboard": "Bảng điều khiển",
+      "tasks": "Nhiệm vụ",
+      "apps": "Ứng dụng",
+      "users": "Người dùng",
+      "aiTalkExample": "Ví dụ AI Talk"
+    },
+    "pages": {
+      "auth": "Xác thực",
+      "signIn": "Đăng nhập",
+      "signIn2Col": "Đăng nhập (2 cột)",
+      "signUp": "Đăng ký",
+      "forgotPassword": "Quên mật khẩu",
+      "otp": "OTP",
+      "errors": "Lỗi",
+      "error401": "401 | Không được xác thực",
+      "error403": "403 | Bị cấm",
+      "error404": "404 | Không tìm thấy",
+      "error500": "500 | Lỗi máy chủ",
+      "error503": "503 | Bảo trì"
+    },
+    "other": {
+      "settings": "Cài đặt",
+      "propComponents": "Component (prop)",
+      "helpCenter": "Trợ giúp",
+      "outsideGithub": "Trang ngoài (GitHub)",
+      "plansPricing": "Gói & giá"
+    }
+  },
+  "settings": {
+    "layout": {
+      "title": "Cài đặt",
+      "description": "Quản lý cấu hình cửa hàng của bạn."
+    },
+    "common": {
+      "submitToastTitle": "Bạn đã gửi các giá trị sau:",
+      "pleaseWait": "Vui lòng chờ"
+    },
+    "systemConfig": {
+      "createdToast": "Đã tạo cấu hình hệ thống với giá trị mặc định."
+    },
+    "account": {
+      "title": "Tài khoản",
+      "subtitle": "Cập nhật cài đặt tài khoản. Chọn ngôn ngữ và múi giờ ưu tiên.",
+      "name": "Tên",
+      "namePlaceholder": "Tên của bạn",
+      "nameDescription": "Tên này sẽ hiển thị trên hồ sơ và trong email.",
+      "dob": "Ngày sinh",
+      "pickDate": "Chọn ngày",
+      "calendarLabel": "Ngày sinh",
+      "dobDescription": "Ngày sinh được dùng để tính tuổi.",
+      "language": "Ngôn ngữ",
+      "selectLanguage": "Chọn ngôn ngữ...",
+      "searchLanguage": "Tìm ngôn ngữ...",
+      "noLanguageFound": "Không tìm thấy ngôn ngữ.",
+      "languageDescription": "Ngôn ngữ dùng trong bảng điều khiển.",
+      "submit": "Cập nhật tài khoản",
+      "languages": {
+        "en": "Tiếng Anh",
+        "fr": "Tiếng Pháp",
+        "de": "Tiếng Đức",
+        "es": "Tiếng Tây Ban Nha",
+        "pt": "Tiếng Bồ Đào Nha",
+        "ru": "Tiếng Nga",
+        "ja": "Tiếng Nhật",
+        "ko": "Tiếng Hàn",
+        "vi": "Tiếng Việt"
+      }
+    },
+    "profile": {
+      "title": "Hồ sơ",
+      "subtitle": "Đây là cách người khác nhìn thấy bạn trên trang.",
+      "username": "Tên người dùng",
+      "usernamePlaceholder": "shadcn",
+      "usernameDescription": "Tên hiển thị công khai. Có thể là tên thật hoặc bí danh. Bạn chỉ có thể đổi tối đa mỗi 30 ngày một lần.",
+      "email": "Email",
+      "selectEmail": "Chọn email",
+      "emailDescription": "Bạn có thể quản lý email đã xác minh trong phần cài đặt email.",
+      "bio": "Tiểu sử",
+      "bioPlaceholder": "Giới thiệu ngắn về bạn",
+      "bioDescriptionBefore": "Bạn có thể dùng ",
+      "bioDescriptionMention": "@mention",
+      "bioDescriptionAfter": " để nhắc tới người dùng và tổ chức khác.",
+      "urls": "URL",
+      "urlsDescription": "Thêm liên kết tới website, blog hoặc mạng xã hội.",
+      "addUrl": "Thêm URL",
+      "submit": "Cập nhật hồ sơ",
+      "resetForm": "Đặt lại biểu mẫu",
+      "defaultBio": "Tôi có một chiếc máy tính."
+    },
+    "appearance": {
+      "title": "Giao diện",
+      "subtitle": "Tùy chỉnh giao diện ứng dụng. Tự động chuyển giữa chủ đề sáng và tối.",
+      "systemDescription": "Tùy chọn giao diện: chủ đề và phông chữ.",
+      "font": "Phông chữ",
+      "selectFont": "Chọn phông chữ",
+      "fontDescription": "Chọn phông chữ dùng trong bảng điều khiển.",
+      "fontInter": "Inter",
+      "fontManrope": "Manrope",
+      "fontSystem": "Hệ thống",
+      "theme": "Chủ đề",
+      "themeDescription": "Chọn chủ đề cho bảng điều khiển.",
+      "themeLight": "Sáng",
+      "themeDark": "Tối",
+      "submit": "Cập nhật tùy chọn"
+    },
+    "display": {
+      "title": "Hiển thị",
+      "subtitle": "Bật hoặc tắt các mục để điều khiển nội dung hiển thị trong ứng dụng.",
+      "sidebar": "Thanh bên",
+      "sidebarDescription": "Chọn các mục hiển thị trên thanh bên.",
+      "itemRecents": "Gần đây",
+      "itemHome": "Trang chủ",
+      "itemApplications": "Ứng dụng",
+      "itemDesktop": "Màn hình chính",
+      "itemDownloads": "Tải xuống",
+      "itemDocuments": "Tài liệu",
+      "submit": "Cập nhật hiển thị"
+    },
+    "notifications": {
+      "title": "Thông báo",
+      "subtitle": "Cấu hình cách bạn nhận thông báo.",
+      "notifyAbout": "Thông báo cho tôi về...",
+      "notifyAll": "Mọi tin nhắn mới",
+      "notifyMentions": "Tin nhắn trực tiếp và lượt nhắc",
+      "notifyNone": "Không có gì",
+      "emailSection": "Thông báo qua email",
+      "communication": "Email giao tiếp",
+      "communicationDesc": "Nhận email về hoạt động tài khoản.",
+      "marketing": "Email tiếp thị",
+      "marketingDesc": "Nhận email về sản phẩm, tính năng mới và hơn thế nữa.",
+      "social": "Email mạng xã hội",
+      "socialDesc": "Nhận email về lời mời kết bạn, theo dõi và tương tự.",
+      "security": "Email bảo mật",
+      "securityDesc": "Nhận email về hoạt động và bảo mật tài khoản.",
+      "mobileTitle": "Dùng cài đặt khác cho thiết bị di động",
+      "mobileDescBefore": "Bạn có thể quản lý thông báo di động tại trang ",
+      "mobileLink": "cài đặt di động",
+      "mobileDescAfter": ".",
+      "submit": "Cập nhật thông báo"
+    },
+    "validation": {
+      "account": {
+        "nameRequired": "Bắt buộc.",
+        "nameMin": "Tên phải có ít nhất 2 ký tự.",
+        "nameMax": "Tên không được dài quá 30 ký tự.",
+        "dobInvalid": "Vui lòng chọn ngày hợp lệ.",
+        "languageRequired": "Vui lòng chọn ngôn ngữ."
+      },
+      "profile": {
+        "usernameMin": "Tên người dùng phải có ít nhất 2 ký tự.",
+        "usernameMax": "Tên người dùng không được dài quá 30 ký tự.",
+        "emailInvalid": "Vui lòng chọn email hiển thị.",
+        "bioMax": "Tiểu sử không được dài quá 160 ký tự.",
+        "bioMin": "Tiểu sử phải có ít nhất 4 ký tự.",
+        "urlInvalid": "Vui lòng nhập URL hợp lệ."
+      },
+      "appearance": {
+        "theme": "Vui lòng chọn chủ đề.",
+        "font": "Vui lòng chọn phông chữ."
+      },
+      "display": {
+        "minOne": "Bạn phải chọn ít nhất một mục."
+      },
+      "notifications": {
+        "type": "Bạn cần chọn loại thông báo."
+      }
+    }
+  }
+}

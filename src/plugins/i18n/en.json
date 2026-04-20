@@ -1,0 +1,359 @@
+{
+  "premium": {
+    "premium": "premium",
+    "UpgradeNow": "Upgrade Now"
+  },
+  "marketing": {
+    "hero": {
+      "learnPeople": "More than 1K+ people joined",
+      "getMore": "Get more",
+      "title": "Do you dare to use 365 days to witness a complete transformation?",
+      "subtitle": "The hourglass of time is bursting with thunder. When the quantitative change breaks through the critical point, every morning and evening you work hard will turn into a sea of stars!"
+    },
+    "features": {
+      "title": "Features",
+      "feature1": {
+        "title": "Use modern technology",
+        "description": "More modern component library, free to customize each component"
+      },
+      "feature2": {
+        "title": "Easy to deploy",
+        "description": "One-click deployment to your server, no complicated configuration required"
+      },
+      "feature3": {
+        "title": "Open source code",
+        "description": "Every line of code is open source, you can modify and extend it freely"
+      },
+      "feature4": {
+        "title": "Community support",
+        "description": "You can find help in the community and share your experience"
+      }
+    },
+    "evaluation": {
+      "title": "Evaluation",
+      "subtitle": "These evaluations are simulated data, not actual data"
+    },
+    "pricingPlans": {
+      "title": "Pricing Plans",
+      "subtitle": "Choose the plan that suits you",
+      "buy": "Get it now",
+      "hobby": {
+        "title": "Hobby",
+        "description": "Suitable for beginners",
+        "price": "399",
+        "discount": "599",
+        "unit": "$",
+        "billing": {
+          "cycle": "",
+          "period": ""
+        },
+        "features": {
+          "feature1": "Use part of the website code",
+          "feature2": "Get the latest technology updates",
+          "feature3": "More than 100 components",
+          "feature4": "More than 100 pages"
+        }
+      },
+      "starter": {
+        "title": "Starter",
+        "description": "Suitable for beginners",
+        "price": "599",
+        "discount": "899",
+        "unit": "$",
+        "billing": {
+          "cycle": "",
+          "period": ""
+        },
+        "features": {
+          "feature1": "Use the entire site's code",
+          "feature2": "Read the excellent online documentation",
+          "feature3": "Get the latest technical updates",
+          "feature4": "Over 200 components",
+          "feature5": "Over 200 pages"
+        }
+      },
+      "business": {
+        "title": "Business",
+        "description": "Suitable for beginners",
+        "price": "199",
+        "discount": "399",
+        "unit": "$",
+        "billing": {
+          "cycle": "",
+          "period": ""
+        },
+        "features": {
+          "feature1": "Use the entire site's code",
+          "feature2": "Read the excellent online documentation",
+          "feature3": "Get the latest technical updates",
+          "feature4": "Over 200 components",
+          "feature5": "Over 200 pages",
+          "feature6": "Private assistant support"
+        }
+      }
+    },
+    "setup": {
+      "title": "Setup",
+      "subtitle": "Just 3 minutes to start using"
+    }
+  },
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "download": "Download",
+  "logout": "Log out",
+  "forgotPassword": "Forgot password?",
+  "register": "Register",
+  "language": "English",
+  "forgotPasswordPage": {
+    "title": "Forgot Password",
+    "description": "Enter your registered email and we will send you a link to reset your password.",
+    "emailPlaceholder": "m{'@'}example.com",
+    "continue": "Continue",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "errors": {
+      "requiredEmail": "Email is required.",
+      "invalidEmail": "Please enter a valid email address."
+    }
+  },
+  "loginPage": {
+    "title": "Login",
+    "description": "Enter your email and password below to log into your account.",
+    "noAccount": "Not have an account?",
+    "signUp": "Sign Up",
+    "emailPlaceholder": "m{'@'}example.com",
+    "passwordPlaceholder": "Enter your password",
+    "showPassword": "Show",
+    "hidePassword": "Hide",
+    "continueWith": "Or continue with",
+    "termsPrefix": "By clicking login, you agree to our",
+    "and": "and",
+    "errors": {
+      "requiredEmail": "Email is required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "requiredPassword": "Password is required."
+    }
+  },
+  "signUpPage": {
+    "title": "Sign Up",
+    "description": "Enter your information below to create your account.",
+    "hasAccount": "Already have an account?",
+    "signIn": "Sign In",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "firstNamePlaceholder": "Max",
+    "lastNamePlaceholder": "Robinson",
+    "emailPlaceholder": "m{'@'}example.com",
+    "passwordPlaceholder": "Create a password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter your password",
+    "showPassword": "Show",
+    "hidePassword": "Hide",
+    "submit": "Create Account",
+    "continueWith": "Or continue with",
+    "termsPrefix": "By creating an account, you agree to our",
+    "and": "and",
+    "errors": {
+      "requiredFirstName": "First name is required.",
+      "requiredLastName": "Last name is required.",
+      "requiredEmail": "Email is required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "requiredPassword": "Password is required.",
+      "passwordMin": "Password must be at least 8 characters.",
+      "requiredConfirmPassword": "Please confirm your password.",
+      "passwordMismatch": "Passwords do not match."
+    }
+  },
+  "authLayout": {
+    "headline": "A refined workspace for focused teams.",
+    "subheadline": "Simple surfaces, clear hierarchy, and thoughtful interactions for a premium sign-in experience.",
+    "footer": "Trusted by teams building products with clarity."
+  },
+  "homePage": {
+    "searchKeyWords": "Search Menu"
+  },
+  "changeLanguage": "Change Language",
+  "sidebar": {
+    "group": {
+      "general": "General",
+      "pages": "Pages",
+      "other": "Other"
+    },
+    "settings": {
+      "profile": "Profile",
+      "account": "Account",
+      "appearance": "Appearance",
+      "notifications": "Notifications",
+      "display": "Display"
+    },
+    "general": {
+      "dashboard": "Dashboard",
+      "tasks": "Tasks",
+      "apps": "Apps",
+      "users": "Users",
+      "aiTalkExample": "AI Talk Example"
+    },
+    "pages": {
+      "auth": "Auth",
+      "signIn": "Sign In",
+      "signIn2Col": "Sign In (2 columns)",
+      "signUp": "Sign Up",
+      "forgotPassword": "Forgot Password",
+      "otp": "OTP",
+      "errors": "Errors",
+      "error401": "401 | Unauthorized",
+      "error403": "403 | Forbidden",
+      "error404": "404 | Not Found",
+      "error500": "500 | Internal Server Error",
+      "error503": "503 | Maintenance"
+    },
+    "other": {
+      "settings": "Settings",
+      "propComponents": "Prop components",
+      "helpCenter": "Help center",
+      "outsideGithub": "External page (GitHub)",
+      "plansPricing": "Plans & pricing"
+    }
+  },
+  "settings": {
+    "layout": {
+      "title": "Settings",
+      "description": "Manage your store settings."
+    },
+    "common": {
+      "submitToastTitle": "You submitted the following values:",
+      "pleaseWait": "Please wait"
+    },
+    "systemConfig": {
+      "createdToast": "System config created with default value."
+    },
+    "account": {
+      "title": "Account",
+      "subtitle": "Update your account settings. Set your preferred language and timezone.",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "nameDescription": "This is the name that will be displayed on your profile and in emails.",
+      "dob": "Date of birth",
+      "pickDate": "Pick a date",
+      "calendarLabel": "Date of birth",
+      "dobDescription": "Your date of birth is used to calculate your age.",
+      "language": "Language",
+      "selectLanguage": "Select language...",
+      "searchLanguage": "Search language...",
+      "noLanguageFound": "No language found.",
+      "languageDescription": "This is the language that will be used in the dashboard.",
+      "submit": "Update account",
+      "languages": {
+        "en": "English",
+        "fr": "French",
+        "de": "German",
+        "es": "Spanish",
+        "pt": "Portuguese",
+        "ru": "Russian",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "vi": "Vietnamese"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "This is how others will see you on the site.",
+      "username": "Username",
+      "usernamePlaceholder": "shadcn",
+      "usernameDescription": "This is your public display name. It can be your real name or a pseudonym. You can only change this once every 30 days.",
+      "email": "Email",
+      "selectEmail": "Select an email",
+      "emailDescription": "You can manage verified email addresses in your email settings.",
+      "bio": "Bio",
+      "bioPlaceholder": "Tell us a little bit about yourself",
+      "bioDescriptionBefore": "You can ",
+      "bioDescriptionMention": "@mention",
+      "bioDescriptionAfter": " other users and organizations to link to them.",
+      "urls": "URLs",
+      "urlsDescription": "Add links to your website, blog, or social media profiles.",
+      "addUrl": "Add URL",
+      "submit": "Update profile",
+      "resetForm": "Reset form",
+      "defaultBio": "I own a computer."
+    },
+    "appearance": {
+      "title": "Appearance",
+      "subtitle": "Customize the appearance of the app. Automatically switch between day and night themes.",
+      "systemDescription": "Appearance preferences for theme and font.",
+      "font": "Font",
+      "selectFont": "Select a font",
+      "fontDescription": "Set the font you want to use in the dashboard.",
+      "fontInter": "Inter",
+      "fontManrope": "Manrope",
+      "fontSystem": "System",
+      "theme": "Theme",
+      "themeDescription": "Select the theme for the dashboard.",
+      "themeLight": "Light",
+      "themeDark": "Dark",
+      "submit": "Update preferences"
+    },
+    "display": {
+      "title": "Display",
+      "subtitle": "Turn items on or off to control what's displayed in the app.",
+      "sidebar": "Sidebar",
+      "sidebarDescription": "Select the items you want to display in the sidebar.",
+      "itemRecents": "Recents",
+      "itemHome": "Home",
+      "itemApplications": "Applications",
+      "itemDesktop": "Desktop",
+      "itemDownloads": "Downloads",
+      "itemDocuments": "Documents",
+      "submit": "Update display"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Configure how you receive notifications.",
+      "notifyAbout": "Notify me about...",
+      "notifyAll": "All new messages",
+      "notifyMentions": "Direct messages and mentions",
+      "notifyNone": "Nothing",
+      "emailSection": "Email notifications",
+      "communication": "Communication emails",
+      "communicationDesc": "Receive emails about your account activity.",
+      "marketing": "Marketing emails",
+      "marketingDesc": "Receive emails about new products, features, and more.",
+      "social": "Social emails",
+      "socialDesc": "Receive emails for friend requests, follows, and more.",
+      "security": "Security emails",
+      "securityDesc": "Receive emails about your account activity and security.",
+      "mobileTitle": "Use different settings for my mobile devices",
+      "mobileDescBefore": "You can manage your mobile notifications in the ",
+      "mobileLink": "mobile settings",
+      "mobileDescAfter": " page.",
+      "submit": "Update notifications"
+    },
+    "validation": {
+      "account": {
+        "nameRequired": "Required.",
+        "nameMin": "Name must be at least 2 characters.",
+        "nameMax": "Name must not be longer than 30 characters.",
+        "dobInvalid": "Please select a valid date.",
+        "languageRequired": "Please select a language."
+      },
+      "profile": {
+        "usernameMin": "Username must be at least 2 characters.",
+        "usernameMax": "Username must not be longer than 30 characters.",
+        "emailInvalid": "Please select an email to display.",
+        "bioMax": "Bio must not be longer than 160 characters.",
+        "bioMin": "Bio must be at least 4 characters.",
+        "urlInvalid": "Please enter a valid URL."
+      },
+      "appearance": {
+        "theme": "Please select a theme.",
+        "font": "Please select a font."
+      },
+      "display": {
+        "minOne": "You have to select at least one item."
+      },
+      "notifications": {
+        "type": "You need to select a notification type."
+      }
+    }
+  }
+}

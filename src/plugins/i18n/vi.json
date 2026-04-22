@@ -106,28 +106,28 @@
   "register": "Đăng ký",
   "language": "Tiếng Việt",
   "forgotPasswordPage": {
-    "title": "Quên mật khẩu",
-    "description": "Nhập email đã đăng ký, chúng tôi sẽ gửi cho bạn liên kết đặt lại mật khẩu.",
+    "title": "Đặt lại mật khẩu",
+    "description": "Nhập email bạn dùng cho hệ thống quản lý đặt lịch giúp việc. Chúng tôi sẽ gửi liên kết để bạn đặt mật khẩu mới.",
     "emailPlaceholder": "m{'@'}example.com",
     "continue": "Tiếp tục",
-    "noAccount": "Chưa có tài khoản?",
-    "signUp": "Đăng ký",
+    "noAccount": "Chưa có tài khoản quản lý?",
+    "signUp": "Đăng ký ngay",
     "errors": {
       "requiredEmail": "Email là bắt buộc.",
       "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ."
     }
   },
   "loginPage": {
-    "title": "Đăng nhập",
-    "description": "Nhập email và mật khẩu của bạn để đăng nhập vào tài khoản.",
-    "noAccount": "Chưa có tài khoản?",
+    "title": "Đăng nhập hệ thống",
+    "description": "Vào bảng điều khiển để quản lý lịch đặt, nhân sự giúp việc và yêu cầu từ khách hàng.",
+    "noAccount": "Đơn vị / đội ngũ bạn chưa có tài khoản?",
     "signUp": "Đăng ký",
     "emailPlaceholder": "m{'@'}example.com",
     "passwordPlaceholder": "Nhập mật khẩu",
     "showPassword": "Hiện",
     "hidePassword": "Ẩn",
     "continueWith": "Hoặc tiếp tục với",
-    "termsPrefix": "Bằng cách đăng nhập, bạn đồng ý với",
+    "termsPrefix": "Khi đăng nhập, bạn đồng ý với",
     "and": "và",
     "errors": {
       "requiredEmail": "Email là bắt buộc.",
@@ -136,9 +136,9 @@
     }
   },
   "signUpPage": {
-    "title": "Đăng ký",
-    "description": "Nhập thông tin bên dưới để tạo tài khoản mới.",
-    "hasAccount": "Đã có tài khoản?",
+    "title": "Tạo tài khoản quản lý",
+    "description": "Đăng ký để điều phối ca giúp việc, lịch hẹn và yêu cầu khách — gom trong một hệ thống.",
+    "hasAccount": "Đã dùng hệ thống này?",
     "signIn": "Đăng nhập",
     "firstName": "Tên",
     "lastName": "Họ",
@@ -150,9 +150,9 @@
     "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
     "showPassword": "Hiện",
     "hidePassword": "Ẩn",
-    "submit": "Tạo tài khoản",
+    "submit": "Tạo tài khoản và tiếp tục",
     "continueWith": "Hoặc tiếp tục với",
-    "termsPrefix": "Bằng cách tạo tài khoản, bạn đồng ý với",
+    "termsPrefix": "Khi đăng ký, bạn đồng ý với",
     "and": "và",
     "errors": {
       "requiredFirstName": "Tên là bắt buộc.",
@@ -166,9 +166,11 @@
     }
   },
   "authLayout": {
-    "headline": "Không gian làm việc tinh gọn cho đội ngũ tập trung.",
-    "subheadline": "Bố cục thoáng, thứ bậc rõ ràng và tương tác mượt mà cho trải nghiệm xác thực cao cấp.",
-    "footer": "Được tin dùng bởi các đội ngũ xây dựng sản phẩm chỉn chu."
+    "brandName": "Giúp việc nhà",
+    "logoAlt": "Biểu tượng lịch và người helper — quản lý đặt lịch giúp việc",
+    "headline": "Quản lý đặt lịch người giúp việc gọn gàng, rõ ràng.",
+    "subheadline": "Phân công nhân sự, xác nhận khung giờ và đồng bộ giữa đơn vị cung ứng với gia đình — trong một không gian làm việc thống nhất.",
+    "footer": "Dành cho điều phối viên, công ty dịch vụ và hộ gia đình điều phối giúp việc hằng ngày."
   },
   "homePage": {
     "searchKeyWords": "Tìm kiếm menu"
@@ -197,7 +199,6 @@
     "pages": {
       "auth": "Xác thực",
       "signIn": "Đăng nhập",
-      "signIn2Col": "Đăng nhập (2 cột)",
       "signUp": "Đăng ký",
       "forgotPassword": "Quên mật khẩu",
       "otp": "OTP",

@@ -87,6 +87,12 @@ Plugin initialization entry: `src/plugins/index.ts`
 - Validators: `src/pages/**/validators/*.validator.ts`
 - For data-display pages, table configuration should live in: `src/pages/**/data/**`
 
+## Agent skills & policy
+
+- **Strict/soft matrix:** `.agents/skills/SKILL_SELECTION_POLICY.md`
+- **Commands, constraints, full skill list:** `AGENTS.md` (repo root)
+- **UI/UX (layout, visual design, accessibility, UX review):** `.agents/skills/ui-ux-pro-max/SKILL.md` — skill **soft** bổ sung cho Tailwind/shadcn; repo **không** dùng `frontend-design` (không có trong `.agents/skills/`).
+
 ## Key Conventions
 
 - Routing is file-based: do NOT hand-edit route tables; add/rename/remove pages under `src/pages/**`.

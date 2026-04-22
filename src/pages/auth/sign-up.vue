@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import AuthTitle from './components/auth-title.vue'
+import AuthSplitLayout from './components/auth-split-layout.vue'
 import GitHubButton from './components/github-button.vue'
 import GoogleButton from './components/google-button.vue'
 import PrivacyPolicyButton from './components/privacy-policy-button.vue'
@@ -69,183 +69,166 @@ function onSubmit() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-50">
-    <main class="mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 px-4 py-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-8">
-      <section class="relative hidden overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-12 shadow-[0_30px_80px_-50px_rgba(15,23,42,0.45)] lg:flex lg:flex-col lg:justify-between">
-        <div class="pointer-events-none absolute inset-0 bg-linear-to-br from-indigo-50/90 via-white to-slate-100/80" />
-        <div class="relative space-y-6">
-          <AuthTitle />
-          <div class="space-y-3">
-            <p class="max-w-md text-4xl font-semibold leading-tight tracking-tight text-slate-900">
-              {{ $t('authLayout.headline') }}
-            </p>
-            <p class="max-w-md text-base leading-relaxed text-slate-600">
-              {{ $t('authLayout.subheadline') }}
+  <AuthSplitLayout>
+    <UiCard
+      class="w-full rounded-2xl border border-border/60 bg-card text-card-foreground shadow-[0_1px_2px_rgba(0,0,0,0.04),0_16px_48px_-28px_rgba(0,0,0,0.1)] ring-1 ring-foreground/[0.03] transition-shadow duration-300 dark:shadow-[0_1px_2px_rgba(0,0,0,0.2),0_20px_56px_-32px_rgba(0,0,0,0.55)] dark:ring-foreground/[0.06]"
+    >
+      <UiCardHeader class="space-y-1.5 px-6 pt-7 pb-2">
+        <UiCardTitle class="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+          {{ $t('signUpPage.title') }}
+        </UiCardTitle>
+        <UiCardDescription class="text-sm leading-relaxed text-muted-foreground">
+          {{ $t('signUpPage.description') }}
+          {{ $t('signUpPage.hasAccount') }}
+          <UiButton
+            variant="link"
+            class="h-auto px-0.5 text-sm font-medium text-muted-foreground underline-offset-4 hover:text-primary"
+            @click="$router.push('/auth/sign-in')"
+          >
+            {{ $t('signUpPage.signIn') }}
+          </UiButton>
+        </UiCardDescription>
+      </UiCardHeader>
+      <UiCardContent class="px-6 pb-7">
+        <form class="grid gap-5" @submit.prevent="onSubmit">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="grid gap-2">
+              <UiLabel for="first-name" class="text-sm font-medium text-foreground">
+                {{ $t('signUpPage.firstName') }}
+              </UiLabel>
+              <UiInput
+                id="first-name"
+                v-model="firstName"
+                :placeholder="$t('signUpPage.firstNamePlaceholder')"
+                required
+                :aria-invalid="Boolean(errors.firstName)"
+                class="h-11 rounded-lg border-input bg-background transition-colors duration-200 placeholder:text-muted-foreground/70 focus-visible:ring-2 focus-visible:ring-ring/35"
+              />
+              <p v-if="errors.firstName" class="text-sm text-destructive" role="alert">
+                {{ errors.firstName }}
+              </p>
+            </div>
+            <div class="grid gap-2">
+              <UiLabel for="last-name" class="text-sm font-medium text-foreground">
+                {{ $t('signUpPage.lastName') }}
+              </UiLabel>
+              <UiInput
+                id="last-name"
+                v-model="lastName"
+                :placeholder="$t('signUpPage.lastNamePlaceholder')"
+                required
+                :aria-invalid="Boolean(errors.lastName)"
+                class="h-11 rounded-lg border-input bg-background transition-colors duration-200 placeholder:text-muted-foreground/70 focus-visible:ring-2 focus-visible:ring-ring/35"
+              />
+              <p v-if="errors.lastName" class="text-sm text-destructive" role="alert">
+                {{ errors.lastName }}
+              </p>
+            </div>
+          </div>
+
+          <div class="grid gap-2">
+            <UiLabel for="email" class="text-sm font-medium text-foreground">
+              {{ $t('email') }}
+            </UiLabel>
+            <UiInput
+              id="email"
+              v-model="email"
+              type="email"
+              :placeholder="$t('signUpPage.emailPlaceholder')"
+              autocomplete="email"
+              required
+              :aria-invalid="Boolean(errors.email)"
+              class="h-11 rounded-lg border-input bg-background transition-colors duration-200 placeholder:text-muted-foreground/70 focus-visible:ring-2 focus-visible:ring-ring/35"
+            />
+            <p v-if="errors.email" class="text-sm text-destructive" role="alert">
+              {{ errors.email }}
             </p>
           </div>
-        </div>
-        <p class="relative text-sm text-slate-500">
-          {{ $t('authLayout.footer') }}
-        </p>
-      </section>
 
-      <section class="flex items-center justify-center px-2 py-6 sm:px-4 lg:px-10">
-        <div class="w-full max-w-md space-y-6">
-          <div class="lg:hidden">
-            <AuthTitle />
+          <div class="grid gap-2">
+            <UiLabel for="password" class="text-sm font-medium text-foreground">
+              {{ $t('password') }}
+            </UiLabel>
+            <div class="relative">
+              <UiInput
+                id="password"
+                v-model="password"
+                :type="showPassword ? 'text' : 'password'"
+                :placeholder="$t('signUpPage.passwordPlaceholder')"
+                autocomplete="new-password"
+                required
+                :aria-invalid="Boolean(errors.password)"
+                class="h-11 rounded-lg border-input bg-background pr-18 transition-colors duration-200 placeholder:text-muted-foreground/70 focus-visible:ring-2 focus-visible:ring-ring/35"
+              />
+              <button
+                type="button"
+                class="absolute top-1/2 right-2.5 -translate-y-1/2 rounded-md px-1.5 py-0.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                :aria-label="showPassword ? t('signUpPage.hidePassword') : t('signUpPage.showPassword')"
+                @click="showPassword = !showPassword"
+              >
+                {{ showPassword ? $t('signUpPage.hidePassword') : $t('signUpPage.showPassword') }}
+              </button>
+            </div>
+            <p v-if="errors.password" class="text-sm text-destructive" role="alert">
+              {{ errors.password }}
+            </p>
           </div>
-          <UiCard class="w-full rounded-2xl border border-slate-200/80 bg-white shadow-[0_24px_60px_-36px_rgba(15,23,42,0.45)] transition-shadow duration-300">
-            <UiCardHeader class="space-y-2 px-8 pt-8 pb-2">
-              <UiCardTitle class="text-2xl font-semibold tracking-tight text-slate-900">
-                {{ $t('signUpPage.title') }}
-              </UiCardTitle>
-              <UiCardDescription class="text-sm leading-relaxed text-slate-600">
-                {{ $t('signUpPage.description') }}
-                {{ $t('signUpPage.hasAccount') }}
-                <UiButton
-                  variant="link" class="h-auto px-1 text-sm text-slate-700 transition-colors hover:text-slate-900"
-                  @click="$router.push('/auth/sign-in')"
-                >
-                  {{ $t('signUpPage.signIn') }}
-                </UiButton>
-              </UiCardDescription>
-            </UiCardHeader>
-            <UiCardContent class="px-8 pb-8">
-              <form class="grid gap-6" @submit.prevent="onSubmit">
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div class="grid gap-2">
-                    <UiLabel for="first-name" class="text-sm font-medium text-slate-700">
-                      {{ $t('signUpPage.firstName') }}
-                    </UiLabel>
-                    <UiInput
-                      id="first-name"
-                      v-model="firstName"
-                      :placeholder="$t('signUpPage.firstNamePlaceholder')"
-                      required
-                      :aria-invalid="Boolean(errors.firstName)"
-                      class="h-12 rounded-xl border-slate-200 bg-white transition-all duration-200 focus-visible:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-100"
-                    />
-                    <p v-if="errors.firstName" class="text-sm text-rose-600">
-                      {{ errors.firstName }}
-                    </p>
-                  </div>
-                  <div class="grid gap-2">
-                    <UiLabel for="last-name" class="text-sm font-medium text-slate-700">
-                      {{ $t('signUpPage.lastName') }}
-                    </UiLabel>
-                    <UiInput
-                      id="last-name"
-                      v-model="lastName"
-                      :placeholder="$t('signUpPage.lastNamePlaceholder')"
-                      required
-                      :aria-invalid="Boolean(errors.lastName)"
-                      class="h-12 rounded-xl border-slate-200 bg-white transition-all duration-200 focus-visible:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-100"
-                    />
-                    <p v-if="errors.lastName" class="text-sm text-rose-600">
-                      {{ errors.lastName }}
-                    </p>
-                  </div>
-                </div>
 
-                <div class="grid gap-2">
-                  <UiLabel for="email" class="text-sm font-medium text-slate-700">
-                    {{ $t('email') }}
-                  </UiLabel>
-                  <UiInput
-                    id="email"
-                    v-model="email"
-                    type="email"
-                    :placeholder="$t('signUpPage.emailPlaceholder')"
-                    autocomplete="email"
-                    required
-                    :aria-invalid="Boolean(errors.email)"
-                    class="h-12 rounded-xl border-slate-200 bg-white transition-all duration-200 focus-visible:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-100"
-                  />
-                  <p v-if="errors.email" class="text-sm text-rose-600">
-                    {{ errors.email }}
-                  </p>
-                </div>
+          <div class="grid gap-2">
+            <UiLabel for="confirm-password" class="text-sm font-medium text-foreground">
+              {{ $t('signUpPage.confirmPassword') }}
+            </UiLabel>
+            <div class="relative">
+              <UiInput
+                id="confirm-password"
+                v-model="confirmPassword"
+                :type="showConfirmPassword ? 'text' : 'password'"
+                :placeholder="$t('signUpPage.confirmPasswordPlaceholder')"
+                autocomplete="new-password"
+                required
+                :aria-invalid="Boolean(errors.confirmPassword)"
+                class="h-11 rounded-lg border-input bg-background pr-18 transition-colors duration-200 placeholder:text-muted-foreground/70 focus-visible:ring-2 focus-visible:ring-ring/35"
+              />
+              <button
+                type="button"
+                class="absolute top-1/2 right-2.5 -translate-y-1/2 rounded-md px-1.5 py-0.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                :aria-label="showConfirmPassword ? t('signUpPage.hidePassword') : t('signUpPage.showPassword')"
+                @click="showConfirmPassword = !showConfirmPassword"
+              >
+                {{ showConfirmPassword ? $t('signUpPage.hidePassword') : $t('signUpPage.showPassword') }}
+              </button>
+            </div>
+            <p v-if="errors.confirmPassword" class="text-sm text-destructive" role="alert">
+              {{ errors.confirmPassword }}
+            </p>
+          </div>
 
-                <div class="grid gap-2">
-                  <UiLabel for="password" class="text-sm font-medium text-slate-700">
-                    {{ $t('password') }}
-                  </UiLabel>
-                  <div class="relative">
-                    <UiInput
-                      id="password"
-                      v-model="password"
-                      :type="showPassword ? 'text' : 'password'"
-                      :placeholder="$t('signUpPage.passwordPlaceholder')"
-                      autocomplete="new-password"
-                      required
-                      :aria-invalid="Boolean(errors.password)"
-                      class="h-12 rounded-xl border-slate-200 bg-white pr-20 transition-all duration-200 focus-visible:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-100"
-                    />
-                    <button
-                      type="button"
-                      class="absolute top-1/2 right-3 -translate-y-1/2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-800"
-                      :aria-label="showPassword ? t('signUpPage.hidePassword') : t('signUpPage.showPassword')"
-                      @click="showPassword = !showPassword"
-                    >
-                      {{ showPassword ? $t('signUpPage.hidePassword') : $t('signUpPage.showPassword') }}
-                    </button>
-                  </div>
-                  <p v-if="errors.password" class="text-sm text-rose-600">
-                    {{ errors.password }}
-                  </p>
-                </div>
+          <UiButton type="submit" class="h-11 w-full rounded-lg text-sm font-semibold shadow-sm">
+            {{ $t('signUpPage.submit') }}
+          </UiButton>
 
-                <div class="grid gap-2">
-                  <UiLabel for="confirm-password" class="text-sm font-medium text-slate-700">
-                    {{ $t('signUpPage.confirmPassword') }}
-                  </UiLabel>
-                  <div class="relative">
-                    <UiInput
-                      id="confirm-password"
-                      v-model="confirmPassword"
-                      :type="showConfirmPassword ? 'text' : 'password'"
-                      :placeholder="$t('signUpPage.confirmPasswordPlaceholder')"
-                      autocomplete="new-password"
-                      required
-                      :aria-invalid="Boolean(errors.confirmPassword)"
-                      class="h-12 rounded-xl border-slate-200 bg-white pr-20 transition-all duration-200 focus-visible:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-100"
-                    />
-                    <button
-                      type="button"
-                      class="absolute top-1/2 right-3 -translate-y-1/2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-800"
-                      :aria-label="showConfirmPassword ? t('signUpPage.hidePassword') : t('signUpPage.showPassword')"
-                      @click="showConfirmPassword = !showConfirmPassword"
-                    >
-                      {{ showConfirmPassword ? $t('signUpPage.hidePassword') : $t('signUpPage.showPassword') }}
-                    </button>
-                  </div>
-                  <p v-if="errors.confirmPassword" class="text-sm text-rose-600">
-                    {{ errors.confirmPassword }}
-                  </p>
-                </div>
+          <div class="relative py-1">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <span class="h-px w-full bg-border/70" />
+            </div>
+            <div class="relative flex justify-center text-[0.6875rem] font-medium tracking-wider text-muted-foreground uppercase">
+              <span class="bg-card px-3">{{ $t('signUpPage.continueWith') }}</span>
+            </div>
+          </div>
 
-                <UiButton type="submit" class="h-12 w-full rounded-xl bg-slate-900 text-base font-semibold text-white transition-all duration-200 hover:bg-slate-800 active:scale-[0.99]">
-                  {{ $t('signUpPage.submit') }}
-                </UiButton>
+          <div class="flex flex-col gap-2.5">
+            <GitHubButton />
+            <GoogleButton />
+          </div>
 
-                <UiSeparator :label="$t('signUpPage.continueWith')" />
-
-                <div class="flex flex-col items-center justify-between gap-3">
-                  <GitHubButton />
-                  <GoogleButton />
-                </div>
-
-                <UiCardDescription class="text-sm leading-relaxed text-slate-500">
-                  {{ $t('signUpPage.termsPrefix') }}
-                  <TermsOfServiceButton />
-                  {{ $t('signUpPage.and') }}
-                  <PrivacyPolicyButton />
-                </UiCardDescription>
-              </form>
-            </UiCardContent>
-          </UiCard>
-        </div>
-      </section>
-    </main>
-  </div>
+          <UiCardDescription class="text-center text-xs leading-relaxed text-muted-foreground">
+            {{ $t('signUpPage.termsPrefix') }}
+            <TermsOfServiceButton />
+            {{ $t('signUpPage.and') }}
+            <PrivacyPolicyButton />
+          </UiCardDescription>
+        </form>
+      </UiCardContent>
+    </UiCard>
+  </AuthSplitLayout>
 </template>

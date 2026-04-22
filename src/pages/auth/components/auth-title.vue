@@ -8,8 +8,8 @@ const logo = computed(() => {
 </script>
 
 <template>
-  <h1 class="flex items-center gap-3 text-xl font-semibold tracking-tight text-slate-900">
-    <img :src="logo" alt="Shadcn Vue Admin logo" class="size-8">
-    <span>Shadcn Vue Admin</span>
+  <h1 class="flex items-center gap-3 text-lg font-semibold tracking-tight text-foreground sm:text-xl">
+    <img :src="logo" :alt="$t('authLayout.logoAlt')" class="size-8 shrink-0 rounded-md">
+    <span>{{ $t('authLayout.brandName') }}</span>
   </h1>
 </template>

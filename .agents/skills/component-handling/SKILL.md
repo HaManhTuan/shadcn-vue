@@ -82,6 +82,10 @@ Refactor a component when any condition is true:
 - **Is it a base UI primitive?** -> `src/components/ui/`
 - **Is it reusable logic (not UI)?** -> `src/composables/`
 
+## Related skills
+
+- **UI/UX design** (visual hierarchy, palettes, spacing systems, accessibility, UX review): [ui-ux-pro-max/SKILL.md](../ui-ux-pro-max/SKILL.md) — label **soft**; see [SKILL_SELECTION_POLICY.md](../SKILL_SELECTION_POLICY.md). Not a substitute for placement rules above.
+
 ## Naming Notes
 
 - Use existing repo style: **kebab-case** for `.vue` files.

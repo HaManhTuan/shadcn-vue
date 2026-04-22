@@ -31,6 +31,7 @@ Note:
 | `shadcn-vue`                       | `shadcn-vue`                       | soft   | Library guidance; use for component usage/troubleshooting.                  |
 | `tailwind-css-patterns`            | `tailwind-css-patterns`            | soft   | Utility styling patterns and responsive practices.                          |
 | `tailwind-design-system`           | `tailwind-design-system`           | soft   | Design-system ideas; use selectively to avoid over-migration.               |
+| `ui-ux-pro-max`                    | `ui-ux-pro-max`                    | soft   | UI/UX design intelligence (layout, a11y, palettes, patterns); use for visual/UX work. |
 | `animate`                          | `animate`                          | soft   | Optional motion enhancement; apply intentionally and accessibly.            |
 | `supabase-postgres-best-practices` | `supabase-postgres-best-practices` | soft   | DB/SQL-specific; only relevant when backend/database tasks exist.           |
 
@@ -41,6 +42,7 @@ Note:
 3. If two soft skills conflict, prefer the one closest to the user request.
 4. Never refactor project architecture solely to satisfy a soft skill.
 
-## Missing/Unavailable Skill
+## UI/UX design tasks
 
-- `frontend-design`: not found in `.agents/skills/` at the time of this policy.
+- Use **`ui-ux-pro-max`** (`skill_folder`=`ui-ux-pro-max`, `skill_name`=`ui-ux-pro-max`) for UI structure, visual design, interaction, accessibility, and UX review.
+- Do **not** reference **`frontend-design`**: it is not part of this repository’s `.agents/skills/` set; `ui-ux-pro-max` is the canonical substitute.

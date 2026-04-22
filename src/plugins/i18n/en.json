@@ -106,28 +106,28 @@
   "register": "Register",
   "language": "English",
   "forgotPasswordPage": {
-    "title": "Forgot Password",
-    "description": "Enter your registered email and we will send you a link to reset your password.",
+    "title": "Reset your password",
+    "description": "Enter the email you use for the house help scheduling workspace. We will send you a link to set a new password.",
     "emailPlaceholder": "m{'@'}example.com",
     "continue": "Continue",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up",
+    "noAccount": "New to the scheduling workspace?",
+    "signUp": "Create an account",
     "errors": {
       "requiredEmail": "Email is required.",
       "invalidEmail": "Please enter a valid email address."
     }
   },
   "loginPage": {
-    "title": "Login",
-    "description": "Enter your email and password below to log into your account.",
-    "noAccount": "Not have an account?",
-    "signUp": "Sign Up",
+    "title": "Sign in to your workspace",
+    "description": "Access the dashboard to manage bookings, workers, and schedules for domestic help.",
+    "noAccount": "Need an account for your team?",
+    "signUp": "Sign up",
     "emailPlaceholder": "m{'@'}example.com",
     "passwordPlaceholder": "Enter your password",
     "showPassword": "Show",
     "hidePassword": "Hide",
     "continueWith": "Or continue with",
-    "termsPrefix": "By clicking login, you agree to our",
+    "termsPrefix": "By signing in, you agree to our",
     "and": "and",
     "errors": {
       "requiredEmail": "Email is required.",
@@ -136,9 +136,9 @@
     }
   },
   "signUpPage": {
-    "title": "Sign Up",
-    "description": "Enter your information below to create your account.",
-    "hasAccount": "Already have an account?",
+    "title": "Create your workspace account",
+    "description": "Register to coordinate house help shifts, client requests, and calendars in one place.",
+    "hasAccount": "Already managing schedules here?",
     "signIn": "Sign In",
     "firstName": "First name",
     "lastName": "Last name",
@@ -150,9 +150,9 @@
     "confirmPasswordPlaceholder": "Re-enter your password",
     "showPassword": "Show",
     "hidePassword": "Hide",
-    "submit": "Create Account",
+    "submit": "Create account & continue",
     "continueWith": "Or continue with",
-    "termsPrefix": "By creating an account, you agree to our",
+    "termsPrefix": "By registering, you agree to our",
     "and": "and",
     "errors": {
       "requiredFirstName": "First name is required.",
@@ -166,9 +166,11 @@
     }
   },
   "authLayout": {
-    "headline": "A refined workspace for focused teams.",
-    "subheadline": "Simple surfaces, clear hierarchy, and thoughtful interactions for a premium sign-in experience.",
-    "footer": "Trusted by teams building products with clarity."
+    "brandName": "HelpBook",
+    "logoAlt": "Calendar and helper icon — house help scheduling",
+    "headline": "Run domestic help bookings without the chaos.",
+    "subheadline": "Assign workers, confirm time slots, and keep households and agencies aligned — from one calm, structured workspace.",
+    "footer": "Built for coordinators who manage cleaners, caregivers, and home help every day."
   },
   "homePage": {
     "searchKeyWords": "Search Menu"
@@ -197,7 +199,6 @@
     "pages": {
       "auth": "Auth",
       "signIn": "Sign In",
-      "signIn2Col": "Sign In (2 columns)",
       "signUp": "Sign Up",
       "forgotPassword": "Forgot Password",
       "otp": "OTP",

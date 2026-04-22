@@ -1,6 +1,6 @@
 import { MoveHorizontalIcon, UnfoldHorizontalIcon } from '@lucide/vue'
 
-export const THEMES = ['zinc', 'red', 'rose', 'orange', 'green', 'blue', 'yellow', 'violet'] as const
+export const THEMES = ['zinc', 'red', 'rose', 'orange', 'green', 'teal', 'blue', 'yellow', 'violet'] as const
 export type Theme = typeof THEMES[number]
 
 export const THEME_PRIMARY_COLORS: { theme: Theme, primaryColor: string }[] = [
@@ -9,6 +9,7 @@ export const THEME_PRIMARY_COLORS: { theme: Theme, primaryColor: string }[] = [
   { theme: 'rose', primaryColor: 'oklch(0.645 0.246 16.439)' },
   { theme: 'orange', primaryColor: 'oklch(0.705 0.213 47.604)' },
   { theme: 'green', primaryColor: 'oklch(0.723 0.219 149.579)' },
+  { theme: 'teal', primaryColor: 'oklch(0.723 0.219 195)' },
   { theme: 'blue', primaryColor: 'oklch(48.8% 0.243 264.376)' },
   { theme: 'yellow', primaryColor: 'oklch(68.1% 0.162 75.834)' },
   { theme: 'violet', primaryColor: 'oklch(0.606 0.25 292.717)' },

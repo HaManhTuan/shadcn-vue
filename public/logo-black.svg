@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-satellite"><path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/><path d="m8 12 4 4 6-6-4-4Z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <!-- Lịch đặt lịch + silhouette người (helper) -->
+  <path d="M8 3.5v3M16 3.5v3" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
+  <rect x="3.5" y="6" width="17" height="15" rx="2.5" stroke="#0a0a0a" stroke-width="2"/>
+  <path d="M3.5 10.5h17" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="15.25" r="2.25" stroke="#0a0a0a" stroke-width="2"/>
+  <path d="M8.25 19.75c.85-1.65 2.35-2.5 3.75-2.5s2.9.85 3.75 2.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
+</svg>

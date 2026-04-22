@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import AuthTitle from './components/auth-title.vue'
+import AuthSplitLayout from './components/auth-split-layout.vue'
 
 const { t } = useI18n()
 const email = ref('')
@@ -29,78 +29,54 @@ function onSubmit() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-50">
-    <main class="mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 px-4 py-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-8">
-      <section class="relative hidden overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-12 shadow-[0_30px_80px_-50px_rgba(15,23,42,0.45)] lg:flex lg:flex-col lg:justify-between">
-        <div class="pointer-events-none absolute inset-0 bg-linear-to-br from-cyan-50/90 via-white to-slate-100/80" />
-        <div class="relative space-y-6">
-          <AuthTitle />
-          <div class="space-y-3">
-            <p class="max-w-md text-4xl font-semibold leading-tight tracking-tight text-slate-900">
-              {{ $t('authLayout.headline') }}
-            </p>
-            <p class="max-w-md text-base leading-relaxed text-slate-600">
-              {{ $t('authLayout.subheadline') }}
+  <AuthSplitLayout>
+    <UiCard
+      class="w-full rounded-2xl border border-border/60 bg-card text-card-foreground shadow-[0_1px_2px_rgba(0,0,0,0.04),0_16px_48px_-28px_rgba(0,0,0,0.1)] ring-1 ring-foreground/[0.03] transition-shadow duration-300 dark:shadow-[0_1px_2px_rgba(0,0,0,0.2),0_20px_56px_-32px_rgba(0,0,0,0.55)] dark:ring-foreground/[0.06]"
+    >
+      <UiCardHeader class="space-y-1.5 px-6 pt-7 pb-2">
+        <UiCardTitle class="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+          {{ $t('forgotPasswordPage.title') }}
+        </UiCardTitle>
+        <UiCardDescription class="text-sm leading-relaxed text-muted-foreground">
+          {{ $t('forgotPasswordPage.description') }}
+        </UiCardDescription>
+      </UiCardHeader>
+      <UiCardContent class="px-6 pb-7">
+        <form class="grid gap-5" @submit.prevent="onSubmit">
+          <div class="grid gap-2">
+            <UiLabel for="email" class="text-sm font-medium text-foreground">
+              {{ $t('email') }}
+            </UiLabel>
+            <UiInput
+              id="email"
+              v-model="email"
+              type="email"
+              :placeholder="$t('forgotPasswordPage.emailPlaceholder')"
+              autocomplete="email"
+              required
+              :aria-invalid="Boolean(error)"
+              class="h-11 rounded-lg border-input bg-background transition-colors duration-200 placeholder:text-muted-foreground/70 focus-visible:ring-2 focus-visible:ring-ring/35"
+            />
+            <p v-if="error" class="text-sm text-destructive" role="alert">
+              {{ error }}
             </p>
           </div>
-        </div>
-        <p class="relative text-sm text-slate-500">
-          {{ $t('authLayout.footer') }}
-        </p>
-      </section>
+          <UiButton type="submit" class="h-11 w-full rounded-lg text-sm font-semibold shadow-sm">
+            {{ $t('forgotPasswordPage.continue') }}
+          </UiButton>
 
-      <section class="flex items-center justify-center px-2 py-6 sm:px-4 lg:px-10">
-        <div class="w-full max-w-md space-y-6">
-          <div class="lg:hidden">
-            <AuthTitle />
-          </div>
-          <UiCard class="w-full rounded-2xl border border-slate-200/80 bg-white shadow-[0_24px_60px_-36px_rgba(15,23,42,0.45)] transition-shadow duration-300">
-            <UiCardHeader class="space-y-2 px-8 pt-8 pb-2">
-              <UiCardTitle class="text-2xl font-semibold tracking-tight text-slate-900">
-                {{ $t('forgotPasswordPage.title') }}
-              </UiCardTitle>
-              <UiCardDescription class="text-sm leading-relaxed text-slate-600">
-                {{ $t('forgotPasswordPage.description') }}
-              </UiCardDescription>
-            </UiCardHeader>
-            <UiCardContent class="px-8 pb-8">
-              <form class="grid gap-6" @submit.prevent="onSubmit">
-                <div class="grid gap-2">
-                  <UiLabel for="email" class="text-sm font-medium text-slate-700">
-                    {{ $t('email') }}
-                  </UiLabel>
-                  <UiInput
-                    id="email"
-                    v-model="email"
-                    type="email"
-                    :placeholder="$t('forgotPasswordPage.emailPlaceholder')"
-                    autocomplete="email"
-                    required
-                    :aria-invalid="Boolean(error)"
-                    class="h-12 rounded-xl border-slate-200 bg-white transition-all duration-200 focus-visible:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-100"
-                  />
-                  <p v-if="error" class="text-sm text-rose-600">
-                    {{ error }}
-                  </p>
-                </div>
-                <UiButton type="submit" class="h-12 w-full rounded-xl bg-slate-900 text-base font-semibold text-white transition-all duration-200 hover:bg-slate-800 active:scale-[0.99]">
-                  {{ $t('forgotPasswordPage.continue') }}
-                </UiButton>
-
-                <div class="text-sm text-slate-600">
-                  {{ $t('forgotPasswordPage.noAccount') }}
-                  <UiButton
-                    variant="link" class="h-auto px-1 text-sm text-slate-700 transition-colors hover:text-slate-900"
-                    @click="$router.push('/auth/sign-up')"
-                  >
-                    {{ $t('forgotPasswordPage.signUp') }}
-                  </UiButton>
-                </div>
-              </form>
-            </UiCardContent>
-          </UiCard>
-        </div>
-      </section>
-    </main>
-  </div>
+          <p class="text-center text-sm text-muted-foreground">
+            {{ $t('forgotPasswordPage.noAccount') }}
+            <UiButton
+              variant="link"
+              class="h-auto px-0.5 font-medium text-muted-foreground underline-offset-4 hover:text-primary"
+              @click="$router.push('/auth/sign-up')"
+            >
+              {{ $t('forgotPasswordPage.signUp') }}
+            </UiButton>
+          </p>
+        </form>
+      </UiCardContent>
+    </UiCard>
+  </AuthSplitLayout>
 </template>
